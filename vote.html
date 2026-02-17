@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Vote Now - XYZZY</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="spotlight"></div>
+<div class="royal-border"></div>
+
+<header>
+    <div class="crown">👑</div>
+    <h1>Cast Your Vote</h1>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="vote.html">Vote Now</a>
+    </nav>
+</header>
+
+<section class="hero">
+
+    <div class="hero-image">
+        <!-- QR SAME SIZE AS PHOTO -->
+        <img src="adit.png.jpeg" alt="QR Co">
+    </div>
+
+    <div class="hero-content">
+        <h2>Scan & Support</h2>
+        <p>Each ₹10 equals 1 official vote.</p>
+<p>Note -The amount will go directly in aditi karn esewa ID and added to the voting.</p>
+<P>step 1 :   SCAN QR IN ESEWA </P>
+<p>step 2 : put rs 10 for one vote or according to your choice for multiple votes  .</p>
+<p>step 3 : write your full name in remarks.</p>
+
+
+            <button class="btn" onclick="shareWhatsApp()">Share</button>
+            <button class="btn" onclick="copyLink()">Copy Link</button>
+        </div>
+
+        <p id="copyMessage"></p>
+    </div>
+
+</section>
+
+<footer>
+    <p>Voting Support Page - ADITI KARNA</p>
+</footer>
+
+<script>
+function shareWhatsApp() {
+    let message = "Support our finalist in XYZZY Grand Finale! Each ₹10 = 1 Vote 👑 " + window.location.href;
+    let url = "https://wa.me/?text=" + encodeURIComponent(message);
+    window.open(url, "_blank");
+}
+
+function copyLink() {
+    navigator.clipboard.writeText(window.location.href);
+    document.getElementById("copyMessage").innerText = "Link copied!";
+}
+</script>
+
+</body>
+</html>
