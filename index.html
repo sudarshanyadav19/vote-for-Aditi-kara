@@ -1,0 +1,96 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Support Our Finalist - XYZZY</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="spotlight"></div>
+<div class="royal-border"></div>
+
+<!-- SIDE COUNTDOWN -->
+<div class="side-countdown">
+    <h3>Voting Ends In:</h3>
+    <div id="timer"></div>
+</div>
+
+<header class="fade-in">
+    <div class="crown">👑</div>
+    <h1>Support Our Finalist Aditi karn</h1>
+    <h2>Grand Finale - GLAM VOUGE NEPAL 2026 </h2>
+
+    <div class="ribbon">CROWN HER DREAM</div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="vote.html">Vote Now</a>
+    </nav>
+</header>
+
+<section class="hero slide-up">
+
+    <div class="hero-image">
+        <img src="face.png.jpeg" alt="Contestant Photo">
+    </div>
+
+    <div class="hero-content">
+        <h2>Elegance. Intelligence. Grace.</h2>
+        <p>
+            From a small village of Madhesh, she rises with determination
+            to represent confidence, intelligence, and grace
+            on the grand stage of GLAM VOUGE NEPAL 2026.
+        </p>
+
+        <p class="highlight">Every ₹10 = 1 Official Vote</p>
+
+        <a href="vote.html" class="btn">Cast Your Vote </a>
+    </div>
+
+</section>
+
+<section class="message fade-in">
+    <div class="glass-card">
+        <h2>A Message From The Finalist</h2>
+        <p>
+            This journey is powered by belief and unity.
+            Your vote is more than support — it is strength,
+            encouragement, and the step toward the crown.
+        </p>
+    </div>
+</section>
+
+<footer>
+    <p>Voting Support Page - FINILIST ADITI KARN AT GLAM VOUGE NEPAL</p>
+</footer>
+
+<script>
+/* Countdown Timer */
+let endDate = new Date("February 20, 2026 23:59:59").getTime();
+
+let timer = setInterval(function() {
+    let now = new Date().getTime();
+    let distance = endDate - now;
+
+    let days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    let seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    document.getElementById("timer").innerHTML =
+        days + "d<br>" + hours + "h<br>" + minutes + "m<br>" + seconds + "s";
+
+    if (distance < 0) {
+        clearInterval(timer);
+        document.getElementById("timer").innerHTML = "Closed";
+    }
+}, 1000);
+</script>
+<script>
+alert("This site is personaly belongs to miss Aditi Karn for personal marketing and support not to any orgnization.");
+</script>
+</body>
+</html>
